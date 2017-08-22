@@ -1,0 +1,22 @@
+root@master:/usr/spark-2.1.1# cat /tmp/data/DataSample.csv
+_ID, TimeSt,Country,Province,City,Latitude,Longitude
+4516516,2017-06-21 00:00:00.143,CA,ON,Waterloo,43.49347,-80.49123
+4516547,2017-06-21 18:00:00.193,CA,ON,London,42.93990,-81.27090
+4516550,2017-06-21 15:00:00.287,CA,ON,Guelph,43.57760,-80.22010
+4516600,2017-06-21 15:00:00.307,CA,ON,Stratford,43.37160,-80.97730
+4516613,2017-06-21 15:00:00.497,CA,ON,Stratford,43.37160,-80.97730
+4516693,2017-06-21 14:00:00.597,CA,ON,Kitchener,43.43810,-80.50990
+4516694,2017-06-21 14:00:00.597,CA,ON,Kitchener,43.43810,-80.50990
+4516614,2017-06-21 15:00:00.497,CA,ON,Stratford,43.37160,-80.97730
+
+root@master:/usr/spark-2.1.1# cd /tmp/data/cleanedfile
+root@master:/tmp/data/cleanedfile# ls -lrt
+total 4
+-rw-r--r-- 1 root root 326 Aug 22 15:13 part-00000-5076be01-0d5a-4d6f-9e9d-dfb63d9a093d.csv
+-rw-r--r-- 1 root root   0 Aug 22 15:13 _SUCCESS
+root@master:/tmp/data/cleanedfile# cat part-00000-5076be01-0d5a-4d6f-9e9d-dfb63d9a093d.csv
+_ID,TimeSt,Country,Province,City,Latitude,Longitude,_cnt
+4516516,2017-06-21 00:00:00.143,CA,ON,Waterloo,43.49347,-80.49123,1
+4516600,2017-06-21 15:00:00.307,CA,ON,Stratford,43.37160,-80.97730,1
+4516547,2017-06-21 18:00:00.193,CA,ON,London,42.93990,-81.27090,1
+4516550,2017-06-21 15:00:00.287,CA,ON,Guelph,43.57760,-80.22010,1
